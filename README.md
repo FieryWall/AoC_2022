@@ -27,7 +27,7 @@ Every solution implemented in own folder `puzzles/dayN`
 and every solution has `exe.py` which covers execution requirements.
 
 ```powershell
-python .\puzzles\day1\exe.py
+python .\day1\exe.py
 ```
 
 CWD is no matter.
