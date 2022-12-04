@@ -1,11 +1,14 @@
 import os
-from pathlib import Path
 import sys
+from pathlib import Path
 
 days = os.listdir('puzzles')
 for day in days:
-    day_path = Path('puzzles', day)
-    solution_path = Path(day_path, 'solution.py')
-    input_path = Path(day_path, 'input.txt')
-    sys.argv = [solution_path.as_posix(), input_path.as_posix()]
-    exec(open(solution_path).read())
+    exe_path = Path('puzzles', day, 'exe.py').absolute()
+    if os.path.exists(exe_path):
+        sys.argv = [exe_path.as_posix()]
+        sys.stdout.write(day + ': ')
+        exec(open(exe_path).read())
+        sys.stdout.write('\n')
+    else:
+        print('\033[91m' + day + " folder doesn't include exe.py" + '\033[0m')

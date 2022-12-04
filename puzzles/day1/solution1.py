@@ -1,7 +1,7 @@
-from sys import argv;
+import sys;
 import re;
 
-input_path = argv[1]
+input_path = sys.argv[1]
 
 txt_file = open(input_path, "r")
 content = txt_file.read()
@@ -13,4 +13,4 @@ for txt_report in re.findall(r'(?>\d+\n)+', content):
         calories += int(txt_number)
     maxCalories = max(maxCalories, calories)
 
-print(maxCalories)
+sys.stdout.write(str(maxCalories))
