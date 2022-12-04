@@ -23,8 +23,7 @@ python run.py
 
 ### Concrete solution
 
-Every puzzle solution might have different structure.  
-But, every solution implemented in own folder `puzzles/dayN`  
+Every solution implemented in own folder `puzzles/dayN`  
 and every solution has `exe.py` which covers execution requirements.
 
 ```powershell
