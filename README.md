@@ -4,14 +4,7 @@
 
 ## Requirements
 
-### Python 3
-
-installed from official [site](https://www.python.org/downloads/).  
-or using scoop
-
-```powershell
-scoop install python
-```
+Install **Python 3** from [official site](https://www.python.org/downloads/).
 
 ## How to run
 
@@ -19,6 +12,8 @@ scoop install python
 
 ```powershell
 python run.py
+# or
+py run.py
 ```
 
 ### Concrete solution
@@ -28,6 +23,8 @@ and every solution has `exe.py` which covers execution requirements.
 
 ```powershell
 python .\day1\exe.py
+# or
+py .\day1\exe.py
 ```
 
 CWD is no matter.
