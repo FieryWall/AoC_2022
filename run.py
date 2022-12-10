@@ -9,9 +9,9 @@ for item_name in items_names:
     if os.path.isdir(item_name):
         r = re.findall(r'day(?P<num>\d+)', item_name)
         if len(r):
-            days_folders_list.append(int(r[0]))
+            days_folders_list.append(r[0])
 
-days_folders_list = [f"day{n}" for n in sorted(days_folders_list)]
+days_folders_list = [f"day{n}" for n in sorted(days_folders_list, key=lambda n: int(n))]
 
 for day_folder in days_folders_list:
     exe_path = Path(day_folder, 'exe.py').absolute()
